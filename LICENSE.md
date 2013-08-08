@@ -1,3 +1,8 @@
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at: http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+## AUI
 Based in part on the WhenIType module of the Atlassian User Interface library:
 https://bitbucket.org/atlassian/aui/src/a5d68e42df29be4d2ee31de4d6f782110e40ea1c/auiplugin/src/main/resources/js/atlassian/whenitype.js
 
@@ -8,9 +13,8 @@ Unless required by applicable law or agreed to in writing, software distributed 
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
 See the License for the specific language governing permissions and limitations under the License.
 
-----------
-
-Based in part on a modified version of the jQuery hotkeys library:
+## jQuery Hotkeys
+Based in part on a modified version of the jQuery Hotkeys plugin:
 https://bitbucket.org/atlassian/aui/src/07fcc653a29f/auiplugin/src/main/resources/js/atlassian/jquery/jquery.hotkeys.js
 
 jQuery hotkeys

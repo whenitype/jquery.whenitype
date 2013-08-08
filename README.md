@@ -4,9 +4,9 @@ jQuery.WhenIType is a jQuery plugin that provides keyboard shortcuts with a flue
 
 This library is based on the WhenIType module of the [Atlassian User Interface library](https://bitbucket.org/atlassian/aui/).  It also includes code from the [jQuery Hotkeys plugin] (https://github.com/jeresig/jquery.hotkeys).  The main changes are:
 * All dependencies on the AUI library have been removed
-* Conditional actions (if/ifnot) have been added.  The AUI version of whenIType was hardcoded to stop keyboard shortcuts when a dialog is open, so this can be used to recreate that functionality as well as to support other situations where a shortcut needs to be temporarily disabled.
-* The JSON file handling from the AUI version has been removed.  This could be added as an optional add-on at some point in the future.
+* Conditional actions (if/ifnot) have been added.  The AUI version of whenIType was hardcoded to disable keyboard shortcuts when a dialog is open, so this can be used to recreate that functionality as well as to support other situations where a shortcut needs to be temporarily disabled.
 * The jQuery Hotkeys code included in this plugin does not use [jQuery special events](http://benalman.com/news/2010/03/jquery-special-events/).
+* The JSON file handling from the AUI version has been removed.  This could become an optional add-on at some point in the future.
 
 ## Getting Started
 Download the [production version][min] or the [development version][max].
@@ -46,8 +46,8 @@ $(document).whenIType("alt+ctrl+shift+s").execute(function () { alert('You press
 You can also do chords.  To fire one of these shortcuts, you must press each key in the chord within a short period of time.
 
 ```javascript
-$(document).whenIType("iddqd").execute(alert('DEGREELESS MODE'));
-$(document).whenIType("idkfa").or("idfa").execute(alert('VERY HAPPY AMMO ADDED'));
+$(document).whenIType("iddqd").execute(function() { alert('DEGREELESS MODE') });
+$(document).whenIType("idkfa").or("idfa").execute(function() { alert('VERY HAPPY AMMO ADDED') });
 ```
 
 ## Documentation
@@ -59,13 +59,13 @@ $(SELECTOR).whenIType("SHORTCUT")[.or("SHORTCUT"]*[.if/ifnot(CONDITION)]*.ACTION
 ```
 
 Where:
-* SELECTOR is any [jQuery selector](http://api.jquery.com/category/selectors/]
+* SELECTOR is any [jQuery selector](http://api.jquery.com/category/selectors/)
 * SHORTCUT is a string that represents the shortcut.  The syntax is basically the same as that of the [jQuery.hotkeys plugin](https://github.com/jeresig/jquery.hotkeys).
-** Optionally, any number of additional shortcuts can be specified with an "or" action.
+  * Optionally, any number of additional shortcuts can be specified with an "or" action.
 * Optionally, any number of conditions can be specified.  The actions for the shortcut will only be executed if all "if" conditions are true and all "ifnot" conditions are false.
-** CONDITION is a function that returns a boolean value.
+  * CONDITION is a function that returns a boolean value.
 * ACTION is the action to execute when the keyboard shortcut is pressed.
-**ARGUMENTS are the arguments for the ACTION (if any)
+  * ARGUMENTS are the arguments for the ACTION (if any)
 
 ### Modifiers
 
