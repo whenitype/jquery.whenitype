@@ -54,7 +54,9 @@ $(document).whenIType("idkfa").or("idfa").execute(alert('VERY HAPPY AMMO ADDED')
 
 The basic form of a jQuery.whenIType action is the following:
 
+```
 $(SELECTOR).whenIType("SHORTCUT")[.or("SHORTCUT"]*[.if/ifnot(CONDITION)]*.ACTION([ARGUMENTS...])
+```
 
 Where:
 * SELECTOR is any [jQuery selector](http://api.jquery.com/category/selectors/]
@@ -90,7 +92,7 @@ Arguments:
 
 ### Actions
 
-All of the actions return the whenIType object.  The actions that accept [jQuery selectors](http://api.jquery.com/category/selectors/] as parameters will add or append to the "title" attribute of the specified element with a message that describes how to activate the shortcut.
+All of the actions return the whenIType object.  The actions that accept [jQuery selectors](http://api.jquery.com/category/selectors/) as parameters will add or append to the "title" attribute of the specified element with a message that describes how to activate the shortcut.
 
 #### execute
 Executes a provided function.
