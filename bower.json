@@ -1,0 +1,21 @@
+{
+  "name": "jquery.whenitype",
+  "version": "1.0.0",
+  "main": [
+    "dist/jquery.whenitype.js", 
+    "dist/jquery.whenitype.min.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "libs",
+    "src",
+    "test",
+    "node_modules"
+  ],
+  "dependencies": {
+    "jquery": "~1.9.0"
+  },
+  "devDependencies": {
+    "qunit": ">=1.12.0"
+  }
+}
