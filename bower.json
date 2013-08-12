@@ -10,7 +10,9 @@
     "libs",
     "src",
     "test",
-    "node_modules"
+    "node_modules",
+    "Gruntfile.js",
+    "package.json"
   ],
   "dependencies": {
     "jquery": "~1.9.0"
