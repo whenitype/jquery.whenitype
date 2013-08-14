@@ -2,4 +2,6 @@ syntax: glob
 node_modules
 dist
 libs
+nuget/Content/Scripts
+dist/nuget
 .git

@@ -1,3 +1,5 @@
 /node_modules/
 /libs/
+/nuget/Content/Scripts/
+/dist/nuget/
 /.hg/
