@@ -11,8 +11,8 @@ This library is based on the WhenIType module of the [Atlassian User Interface l
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/whenitype/jquery.whenitype/master/dist/whenitype.min.js
-[max]: https://raw.github.com/whenitype/jquery.whenitype/master/dist/whenitype.js
+[min]: https://raw.github.com/whenitype/jquery.whenitype/master/dist/jquery.whenitype.min.js
+[max]: https://raw.github.com/whenitype/jquery.whenitype/master/dist/jquery.whenitype.js
 
 In your web page:
 
@@ -29,13 +29,13 @@ $(function() {
 
 ## Examples
 
-You can do simple shortcuts, which execute an action when a single key is pressed.  When a form input has focus, these shortcuts will not fire if the key is one that would output a character (so it won't fire for a letter like "c" or "d", but it will still fire for something like "F1" or "ctrl").
+Simple shortcuts execute an action when a single key is pressed.
 
 ```javascript
 $(document).whenIType("c").or("d").execute(function () { alert('You pressed "c" or "d".'); });
 ```
 
-You can do shortcuts with a modifier key.  Unlike the simple shortcuts, these can fire while focus is in an input.
+Modifier keys, like ctrl and alt, are also supported.  These shortcuts currently use the same syntax as the [jQuery Hotkeys plugin] (https://github.com/jeresig/jquery.hotkeys), so when more than one modifier is used they must be in alphabetical order (alt, ctrl, shift).
 
 ```javascript
 $(document).whenIType("ctrl+s").execute(function () { alert('You pressed "ctrl+s".'); });
@@ -43,7 +43,7 @@ $(document).whenIType("alt+ctrl+s").execute(function () { alert('You pressed "al
 $(document).whenIType("alt+ctrl+shift+s").execute(function () { alert('You pressed "ctrl+alt+shift+s".'); });
 ```
 
-You can also do chords.  To fire one of these shortcuts, you must press each key in the chord within a short period of time.
+Another type of shortcut is a "chord" of two or more characters.  To fire one of these shortcuts, you must press each key in the chord within a short period of time.
 
 ```javascript
 $(document).whenIType("iddqd").execute(function() { alert('DEGREELESS MODE') });
